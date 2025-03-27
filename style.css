@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#scrollText {
+    position: absolute;
+    font-size: 50px;
+    font-weight: bold;
+    top: -100px; /* Başlangıçta sayfanın üstünde olacak */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    animation: moveDown 5s linear infinite; /* 5 saniyede aşağı kayacak, sürekli tekrar edecek */
+}
+
+@keyframes moveDown {
+    0% {
+        top: -100px; /* En yukarıdan başla */
+    }
+    100% {
+        top: 100vh; /* Sayfanın en altına git */
+    }
+}
